@@ -1,0 +1,160 @@
+/* Basic reset and body styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e3f2fd; /* Light blue background */
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff; /* White background for main container */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50; /* Dark slate color */
+}
+
+/* Input field, date, priority selector, and add button */
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.input-field, .date-field, .priority-field {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.priority-field {
+  background-color: #f0f4f8;
+  color: #495057;
+}
+
+.add-button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff; /* Standard blue for the Add button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+/* To-Do list styling */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #ffffff; /* White background for individual tasks */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.task-details {
+  flex: 1;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.task-priority {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Priority levels with colors */
+.priority-low {
+  color: #28a745; /* Green */
+  background-color: #d4edda; /* Light green background */
+}
+
+.priority-medium {
+  color: #ffc107; /* Yellow */
+  background-color: #fff3cd; /* Light yellow background */
+}
+
+.priority-high {
+  color: #dc3545; /* Red */
+  background-color: #f8d7da; /* Light red background */
+}
+
+.delete-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #dc3545; /* Red for delete */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .input-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .input-field, .date-field, .priority-field, .add-button {
+    width: 100%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem;
+  }
+  .delete-button {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
